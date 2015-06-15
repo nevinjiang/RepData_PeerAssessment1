@@ -10,6 +10,7 @@ output: html_document
 ```r
 library(dplyr)
 library(ggplot2)
+library(knitr)
 ```
 
 
@@ -17,6 +18,7 @@ library(ggplot2)
 
 
 ```r
+unzip("activity.zip")
 df <- read.csv("activity.csv")
 df$date <- as.POSIXct(strptime(df$date, format = "%Y-%m-%d") )
 ```
@@ -99,3 +101,4 @@ g4 + facet_grid(weekdays ~ .)
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
+7. output
